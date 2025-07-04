@@ -28,11 +28,17 @@ A secure ASP.NET Core MVC application with JWT Authentication.
 - `Services/` - JWT generation logic
 - `Views/` - Razor views for MVC (if any)
 
-## 📷 Demo (optional)
-Add screenshots or a short GIF here.
-![ContactManager Screenshot](Demo/demo-screenshot_Create.png)
-![ContactManager Screenshot](Demo/demo-screenshot_Update.png)
-![ContactManager Screenshot](Demo/demo-screenshot_Get.png)
+## 📷 Demo Screenshots
+
+### 🧾 Create Person
+![Create Person](wwwroot/Demo/demo-screenshot_create.png)
+
+### 📋 Get All Persons
+![Get All Persons](wwwroot/Demo/demo-screenshot_get.png)
+
+### ✏️ Update Person
+![Update Person](wwwroot/Demo/demo-screenshot_update.png)
+
 ---
 
 Feel free to contribute or open issues for suggestions!
