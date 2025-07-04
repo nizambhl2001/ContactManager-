@@ -1,0 +1,77 @@
+﻿@model AspNetCoreMvcJwtApp.Models.Person
+
+<div class="container mt-5 mb-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">Create Person</h2>
+        </div>
+        <div class="card-body">
+            <form asp-action="Create" method="post" id="createForm">
+                <!-- Name -->
+                <div class="mb-4">
+                    <label asp-for="Name" class="form-label fw-semibold">Name</label>
+                    <input asp-for="Name" class="form-control form-control-lg border-primary shadow-sm" placeholder="Enter full name" />
+                </div>
+
+                <!-- Phone Numbers -->
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Phone Numbers</label>
+                    <div id="phone-container" class="d-flex flex-column gap-2">
+                        <div class="input-group">
+                            <input name="phoneNumbers" class="form-control border-success shadow-sm" placeholder="Enter phone number" />
+                        </div>
+                    </div>
+                    <button type="button" onclick="addPhone()" class="btn btn-outline-success btn-sm mt-2">
+                        + Add Phone
+                    </button>
+                </div>
+
+                <!-- Addresses -->
+                <div class="mb-4">
+                    <label class="form-label fw-semibold">Addresses</label>
+                    <div id="address-container" class="d-flex flex-column gap-2">
+                        <div class="input-group">
+                            <input name="addressLocations" class="form-control border-info shadow-sm" placeholder="Enter address" />
+                        </div>
+                    </div>
+                    <button type="button" onclick="addAddress()" class="btn btn-outline-info btn-sm mt-2">
+                        + Add Address
+                    </button>
+                </div>
+
+                <!-- Submit -->
+                <div class="text-end">
+                    <button type="submit" class="btn btn-lg btn-primary shadow-sm">
+                        <i class="bi bi-save"></i> Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function addPhone() {
+            const container = document.getElementById('phone-container');
+            const div = document.createElement('div');
+            div.className = "input-group";
+            div.innerHTML = `
+                <input name="phoneNumbers" class="form-control border-success shadow-sm" placeholder="Enter phone number" />
+                <button type="button" class="btn btn-outline-danger" onclick="this.parentElement.remove()">×</button>
+            `;
+            container.appendChild(div);
+        }
+
+        function addAddress() {
+            const container = document.getElementById('address-container');
+            const div = document.createElement('div');
+            div.className = "input-group";
+            div.innerHTML = `
+                <input name="addressLocations" class="form-control border-info shadow-sm" placeholder="Enter address" />
+                <button type="button" class="btn btn-outline-danger" onclick="this.parentElement.remove()">×</button>
+            `;
+            container.appendChild(div);
+        }
+    </script>
+}
