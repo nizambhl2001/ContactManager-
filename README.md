@@ -31,13 +31,13 @@ A secure ASP.NET Core MVC application with JWT Authentication.
 ## 📷 Demo Screenshots
 
 ### 🧾 Create Person
-![Create Person](wwwroot/Demo/demo-screenshot_create.png)
+![Demo Screenshot](AspNetCoreMvcJwtApp/wwwroot/Demo/demo-screenshot_create.png)
 
 ### 📋 Get All Persons
-![Get All Persons](wwwroot/Demo/demo-screenshot_get.png)
+![Demo Screenshot](AspNetCoreMvcJwtApp/wwwroot/Demo/demo-screenshot_get.png)
 
 ### ✏️ Update Person
-![Update Person](wwwroot/Demo/demo-screenshot_update.png)
+![Demo Screenshot](AspNetCoreMvcJwtApp/wwwroot/Demo/demo-screenshot_update.png)
 
 ---
 
